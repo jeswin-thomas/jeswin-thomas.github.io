@@ -97,30 +97,10 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 // Simple Form Handling
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const btn = contactForm.querySelector('button');
-        const originalText = btn.innerText;
-        
-        btn.innerText = 'Sending...';
-        btn.disabled = true;
-        
-        // Simulate API call
-        setTimeout(() => {
-            alert('Thank you for reaching out, Jeswin will get back to you soon!');
-            contactForm.reset();
-            btn.innerText = originalText;
-            btn.disabled = false;
-        }, 1500);
-    });
-}
-
-// Typing Effect using Typed.js
+// Typed.js Integration
 document.addEventListener('DOMContentLoaded', () => {
     new Typed('#typing-text', {
-        strings: ['Software Solutions', 'Intelligent AI Systems', 'Agile Workflows'],
+        strings: ['AI Systems', 'Data Solutions', 'Scalable Systems', 'Agile Architectures'],
         typeSpeed: 60,
         backSpeed: 40,
         backDelay: 2000,

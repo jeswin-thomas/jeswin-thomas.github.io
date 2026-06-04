@@ -215,6 +215,11 @@ nav {
     margin-bottom: 1.5rem;
 }
 
+.hero-content {
+    text-align: left;
+    max-width: 850px; /* Align with the width of the 2-line heading */
+}
+
 .hero h1 {
     font-family: 'Outfit', sans-serif;
     font-size: clamp(3rem, 8vw, 5rem);
@@ -239,8 +244,8 @@ nav {
 .hero-description {
     font-size: 1.2rem;
     color: var(--text-muted);
-    max-width: 600px;
     margin-bottom: 3rem;
+    max-width: 100%; /* Take full width of parent hero-content */
 }
 
 .hero-actions {
@@ -281,6 +286,7 @@ nav {
 .hero-stats {
     display: flex;
     gap: 4rem;
+    flex-wrap: wrap; /* Ensure it wraps on small screens */
 }
 
 .stat-number {
@@ -636,7 +642,6 @@ nav {
     border-radius: 40px;
     padding: 5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 5rem;
     color: var(--white);
     position: relative;
@@ -688,40 +693,6 @@ nav {
 .social-icon:hover {
     background: var(--accent);
     transform: translateY(-5px);
-}
-
-.contact-form {
-    background: var(--white);
-    padding: 3rem;
-    border-radius: 30px;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group input, 
-.form-group textarea {
-    width: 100%;
-    padding: 1.2rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 15px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: var(--transition);
-}
-
-.form-group input:focus, 
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
-}
-
-.btn-block {
-    width: 100%;
-    border: none;
-    cursor: pointer;
 }
 
 /* Footer */
