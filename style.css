@@ -230,6 +230,12 @@ nav {
     -webkit-text-fill-color: transparent;
 }
 
+.typed-cursor {
+    color: var(--accent);
+    font-weight: 300;
+    margin-left: 5px;
+}
+
 .hero-description {
     font-size: 1.2rem;
     color: var(--text-muted);

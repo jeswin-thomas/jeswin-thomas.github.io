@@ -117,4 +117,17 @@ if (contactForm) {
     });
 }
 
+// Typing Effect using Typed.js
+document.addEventListener('DOMContentLoaded', () => {
+    new Typed('#typing-text', {
+        strings: ['Software Solutions', 'AI Architectures', 'Cloud Systems', 'Agile Workflows'],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 2000,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|'
+    });
+});
+
 console.log('Jeswin Thomas Portfolio Engine Initialized.');
