@@ -120,7 +120,7 @@ if (contactForm) {
 // Typing Effect using Typed.js
 document.addEventListener('DOMContentLoaded', () => {
     new Typed('#typing-text', {
-        strings: ['Software Solutions', 'AI Architectures', 'Cloud Systems', 'Agile Workflows'],
+        strings: ['Software Solutions', 'Intelligent AI Systems', 'Agile Workflows'],
         typeSpeed: 60,
         backSpeed: 40,
         backDelay: 2000,
