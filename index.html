@@ -36,6 +36,7 @@
                 right: 1.5rem !important;
                 top: 35px !important;
             }
+
             .mobile-toggle span {
                 display: block !important;
                 width: 100% !important;
@@ -44,16 +45,20 @@
                 border-radius: 2px !important;
                 transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
             }
+
             .mobile-toggle.open span:nth-child(1) {
                 transform: translateY(9px) rotate(45deg) !important;
             }
+
             .mobile-toggle.open span:nth-child(2) {
                 opacity: 0 !important;
                 transform: scaleX(0) !important;
             }
+
             .mobile-toggle.open span:nth-child(3) {
                 transform: translateY(-9px) rotate(-45deg) !important;
             }
+
             .nav-links-wrapper {
                 display: flex !important;
                 position: fixed !important;
@@ -61,7 +66,8 @@
                 right: -100% !important;
                 width: 75% !important;
                 height: 100vh !important;
-                background: #ffffff !important; /* var(--bg-main) fallback */
+                background: #ffffff !important;
+                /* var(--bg-main) fallback */
                 flex-direction: column !important;
                 justify-content: center !important;
                 align-items: center !important;
@@ -71,21 +77,26 @@
                 transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
                 z-index: 1040 !important;
             }
+
             .nav-links-wrapper.active {
                 right: 0 !important;
             }
+
             .nav-links {
                 flex-direction: column !important;
                 align-items: center !important;
                 gap: 2.5rem !important;
                 margin-bottom: 2rem !important;
             }
+
             .nav-cta {
                 margin: 0 !important;
             }
+
             .section {
                 padding: 4rem 0 !important;
             }
+
             .hero {
                 padding-top: 100px !important;
                 height: 100vh !important;
@@ -97,17 +108,21 @@
                 position: relative !important;
                 overflow: hidden !important;
             }
+
             .scroll-indicator {
                 bottom: 15px !important;
             }
+
             .hero h1 {
                 font-size: clamp(2rem, 7vw, 3.5rem) !important;
                 line-height: 1.2 !important;
                 margin-bottom: 0.8rem !important;
             }
+
             .hero-description {
                 margin-bottom: 1.5rem !important;
             }
+
             .hero-content {
                 display: flex !important;
                 flex-direction: column !important;
@@ -116,6 +131,7 @@
                 height: calc(100dvh - 180px) !important;
                 width: 100% !important;
             }
+
             .hero-stats {
                 display: flex !important;
                 flex-direction: row !important;
@@ -124,25 +140,32 @@
                 flex-wrap: nowrap !important;
                 gap: 0.5rem !important;
                 width: 100% !important;
-                margin-top: auto !important; /* Push stats row to the bottom of the hero-content */
+                margin-top: auto !important;
+                /* Push stats row to the bottom of the hero-content */
             }
+
             .stat-item {
                 flex: 1 !important;
                 text-align: center !important;
                 min-width: 0 !important;
             }
+
             .stat-number {
                 font-size: clamp(1.1rem, 4.5vw, 2.2rem) !important;
                 margin-bottom: 0.25rem !important;
             }
+
             .stat-label {
                 font-size: clamp(0.65rem, 2.5vw, 0.9rem) !important;
                 line-height: 1.2 !important;
                 white-space: normal !important;
             }
+
             .stat-item:not(:last-child)::after {
-                display: none !important; /* Hide line dividers to save space */
+                display: none !important;
+                /* Hide line dividers to save space */
             }
+
             .hero-actions {
                 display: flex !important;
                 flex-direction: row !important;
@@ -152,6 +175,7 @@
                 width: 100% !important;
                 margin-top: 2rem !important;
             }
+
             .hero-actions .btn {
                 width: auto !important;
                 min-width: 160px !important;
@@ -168,6 +192,7 @@
                 margin-top: 2.8rem !important;
                 gap: 0.8rem !important;
             }
+
             .hero-actions .btn {
                 width: 85% !important;
                 max-width: 280px !important;
@@ -179,36 +204,45 @@
             .hero {
                 padding-top: 75px !important;
             }
+
             .hero h1 {
                 font-size: 1.7rem !important;
                 margin-bottom: 0.4rem !important;
             }
+
             .hero-description {
                 font-size: 0.8rem !important;
                 margin-bottom: 0.8rem !important;
             }
+
             .hero-actions {
                 gap: 0.5rem !important;
                 margin-top: 2rem !important;
             }
+
             .hero-actions .btn {
                 padding: 0.7rem 1.2rem !important;
                 font-size: 0.8rem !important;
             }
+
             .hero-content {
                 height: calc(100vh - 150px) !important;
                 height: calc(100dvh - 150px) !important;
             }
+
             .hero-stats {
                 margin-top: auto !important;
                 gap: 0.2rem !important;
             }
+
             .stat-number {
                 font-size: 1rem !important;
             }
+
             .stat-label {
                 font-size: 0.6rem !important;
             }
+
             .scroll-indicator {
                 bottom: 8px !important;
             }
@@ -224,8 +258,10 @@
     <header>
         <nav class="container">
             <div class="logo">
-                <span class="logo-text"><span class="logo-highlight">J</span>es<span
-                        class="logo-highlight">w</span>in</span>
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <span class="logo-text"><span class="logo-highlight">J</span>es<span
+                            class="logo-highlight">w</span>in</span>
+                </a>
             </div>
             <div class="nav-links-wrapper">
                 <ul class="nav-links">
@@ -234,6 +270,7 @@
                     <li><a href="#skills">Expertise</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
+                    <li><a href="playground.html">Playground</a></li>
                 </ul>
                 <a href="#contact" class="nav-cta">Let's Talk</a>
             </div>
@@ -383,8 +420,12 @@
                         </div>
                     </div>
                     <div class="about-text" data-aos="fade-left">
-                        <p class="lead">I am a Lead Engineer at Robert Bosch with <span class="exp-years-val">8+</span> years of experience. I specialize in bridging core software engineering with data-driven analytics to build scalable, reliable software systems.</p>
-                        <p>I graduated with a Bachelor's Degree (First Class with Distinction) from <strong>Govt. Model Engineering College</strong>. Beyond my technical work, I am passionate about reading, working on hands-on DIY projects, and enjoying music.</p>
+                        <p class="lead">I am a Lead Engineer at Robert Bosch with <span class="exp-years-val">8+</span>
+                            years of experience. I specialize in bridging core software engineering with data-driven
+                            analytics to build scalable, reliable software systems.</p>
+                        <p>I graduated with a Bachelor's Degree (First Class with Distinction) from <strong>Govt. Model
+                                Engineering College</strong>. Beyond my technical work, I am passionate about reading,
+                            working on hands-on DIY projects, and enjoying music.</p>
                         <div class="about-features">
                             <div class="feature-item">
                                 <div class="feature-icon"><i class="fas fa-code"></i></div>
@@ -397,7 +438,8 @@
                                 <div class="feature-icon"><i class="fas fa-brain"></i></div>
                                 <div class="feature-info">
                                     <h3>Passion</h3>
-                                    <p>Integrating Artificial Intelligence with advanced Data Analytics to solve complex industry challenges.</p>
+                                    <p>Integrating Artificial Intelligence with advanced Data Analytics to solve complex
+                                        industry challenges.</p>
                                 </div>
                             </div>
                         </div>
@@ -527,7 +569,8 @@
                             </div>
                         </div>
                         <div class="social-links" style="justify-content: center; margin-top: 2rem;">
-                            <a href="mailto:jeswinthomas.in@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                            <a href="mailto:jeswinthomas.in@gmail.com" class="social-icon"><i
+                                    class="fas fa-envelope"></i></a>
                             <a href="https://in.linkedin.com/in/jeswin-thomas" target="_blank" class="social-icon"><i
                                     class="fab fa-linkedin-in"></i></a>
                             <a href="https://github.com/Jeswin01" class="social-icon" target="_blank"><i
@@ -542,7 +585,13 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo"><span class="logo-highlight">J</span>es<span class="logo-highlight">w</span>in
+                <div class="footer-logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <span class="logo-highlight">J</span>es<span class="logo-highlight">w</span>in
+                    </a>
+                </div>
+                <div style="margin: 0.5rem 0; display: flex; gap: 1rem; justify-content: center;">
+                    <a href="playground.html" style="text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 600; transition: var(--transition);">Playground</a>
                 </div>
                 <p>&copy; <span id="copyright-year"></span> by Jeswin</p>
             </div>
