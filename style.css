@@ -15,10 +15,6 @@
 }
 
 @media (min-width: 1200px) {
-    :root {
-        --container-width: 1500px;
-    }
-
     .hero-content {
         text-align: center;
         margin: 0 auto;
@@ -44,18 +40,16 @@
     }
 }
 
-@media (min-width: 1600px) {
-    :root {
-        --container-width: 1750px;
-    }
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
-    /* Hide default cursor for custom cursor */
+}
+
+@media (hover: hover) and (pointer: fine) {
+    * {
+        cursor: none;
+    }
 }
 
 html {
@@ -71,6 +65,7 @@ body {
 }
 
 .container {
+    width: 100%;
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 2rem;
@@ -97,6 +92,17 @@ body {
     pointer-events: none;
     z-index: 9998;
     transition: transform 0.2s, background 0.3s;
+}
+
+.cursor.cursor-white {
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.cursor-follower.cursor-white {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
 /* Header & Navigation */
@@ -135,6 +141,34 @@ nav {
 
 .logo-highlight {
     color: var(--accent-light);
+}
+
+.mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.mobile-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--primary);
+    transition: var(--transition);
+}
+
+.mobile-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.mobile-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
 }
 
 .nav-links-wrapper {
@@ -379,7 +413,8 @@ nav {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 5rem;
+    flex-wrap: wrap;
+    gap: 3rem 5rem;
     margin-top: 5rem;
 }
 
@@ -658,7 +693,7 @@ nav {
 /* Skills Section */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
     gap: 2rem;
 }
 
@@ -708,7 +743,7 @@ nav {
 /* Certifications Section */
 .cert-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 2rem;
 }
 
@@ -805,6 +840,10 @@ nav {
     color: var(--accent);
 }
 
+.contact-box .detail-item i {
+    color: rgba(255, 255, 255, 0.8);
+}
+
 .social-links {
     display: flex;
     gap: 1.5rem;
@@ -854,34 +893,57 @@ nav {
     font-size: 0.9rem;
 }
 
-/* Mobile Responsive */
+/* Mobile & Tablet Responsive */
 @media (max-width: 1024px) {
+    .mobile-toggle {
+        display: flex;
+    }
+
+    .nav-links-wrapper {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        height: 100vh;
+        background: var(--bg-main);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        padding: 2rem;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
+        transition: var(--transition);
+        z-index: 1000;
+    }
+
+    .nav-links-wrapper.active {
+        right: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
     .hero h1 {
-        font-size: 4rem;
+        font-size: 3rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .stat-item:not(:last-child)::after {
+        display: none;
     }
 
     .about-grid {
         grid-template-columns: 1fr;
         gap: 4rem;
-    }
-
-    .contact-box {
-        grid-template-columns: 1fr;
-        padding: 3rem;
-    }
-
-    .hero-stats {
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-links-wrapper {
-        display: none;
-    }
-
-    .hero h1 {
-        font-size: 3rem;
     }
 
     .timeline-item {
@@ -899,6 +961,11 @@ nav {
 
     .about-features {
         grid-template-columns: 1fr;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+        padding: 3rem;
     }
 
     .cursor,

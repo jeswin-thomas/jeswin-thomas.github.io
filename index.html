@@ -20,7 +20,65 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <link rel="stylesheet" href="style.css?v=37">
+    <link rel="stylesheet" href="style.css?v=48">
+    <style>
+        /* Force mobile navigation rules to load directly to bypass browser caching */
+        @media (max-width: 1024px) {
+            .mobile-toggle {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 44px !important;
+                height: 44px !important;
+                gap: 5px !important;
+                cursor: pointer !important;
+                z-index: 1050 !important;
+                position: fixed !important;
+                right: 1.5rem !important;
+                top: 23px !important;
+                background: #ffffff !important;
+                border-radius: 50% !important;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+            }
+            .mobile-toggle span {
+                display: block !important;
+                width: 20px !important;
+                height: 2px !important;
+                background: #0b0f19 !important;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            }
+            .nav-links-wrapper {
+                display: flex !important;
+                position: fixed !important;
+                top: 0 !important;
+                right: -100% !important;
+                width: 75% !important;
+                height: 100vh !important;
+                background: #ffffff !important; /* var(--bg-main) fallback */
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: center !important;
+                gap: 3rem !important;
+                padding: 2rem !important;
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05) !important;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+                z-index: 1040 !important;
+            }
+            .nav-links-wrapper.active {
+                right: 0 !important;
+            }
+            .nav-links {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 2.5rem !important;
+                margin-bottom: 2rem !important;
+            }
+            .nav-cta {
+                margin: 0 !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -45,6 +103,7 @@
                 <a href="#contact" class="nav-cta">Let's Talk</a>
             </div>
             <div class="mobile-toggle">
+                <span></span>
                 <span></span>
                 <span></span>
             </div>

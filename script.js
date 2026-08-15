@@ -43,6 +43,18 @@ if (cursor && follower) {
             follower.style.border = '1px solid var(--accent)';
         });
     });
+
+    const contactBox = document.querySelector('.contact-box');
+    if (contactBox) {
+        contactBox.addEventListener('mouseenter', () => {
+            cursor.classList.add('cursor-white');
+            follower.classList.add('cursor-white');
+        });
+        contactBox.addEventListener('mouseleave', () => {
+            cursor.classList.remove('cursor-white');
+            follower.classList.remove('cursor-white');
+        });
+    }
 }
 
 // Header Scroll Effect
@@ -64,7 +76,7 @@ window.addEventListener('scroll', () => {
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 150) {
+        if (window.scrollY >= sectionTop - 150) {
             current = section.getAttribute('id');
         }
     });
@@ -122,6 +134,24 @@ document.addEventListener('DOMContentLoaded', () => {
         showCursor: true,
         cursorChar: '|'
     });
+
+    // Mobile Menu Toggle
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navLinksWrapper = document.querySelector('.nav-links-wrapper');
+    if (mobileToggle && navLinksWrapper) {
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('open');
+            navLinksWrapper.classList.toggle('active');
+        });
+
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('open');
+                navLinksWrapper.classList.remove('active');
+            });
+        });
+    }
 });
 
 console.log('Jeswin Thomas Portfolio Engine Initialized.');
