@@ -13,28 +13,46 @@
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- AOS Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Typed.js -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <link rel="stylesheet" href="style.css?v=66">
+    <link rel="stylesheet" href="style.css?v=69">
     <style>
         /* Force mobile navigation rules to load directly to bypass browser caching */
         @media (max-width: 1024px) {
             .mobile-toggle {
                 display: flex !important;
-                justify-content: center !important;
-                align-items: center !important;
-                font-size: 1.8rem !important;
-                color: #0b0f19 !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
+                width: 28px !important;
+                height: 20px !important;
                 cursor: pointer !important;
                 z-index: 1050 !important;
                 position: fixed !important;
                 right: 1.5rem !important;
-                top: 30px !important;
+                top: 35px !important;
+            }
+            .mobile-toggle span {
+                display: block !important;
+                width: 100% !important;
+                height: 2px !important;
+                background: #0b0f19 !important;
+                border-radius: 2px !important;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            }
+            .mobile-toggle.open span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg) !important;
+            }
+            .mobile-toggle.open span:nth-child(2) {
+                opacity: 0 !important;
+                transform: scaleX(0) !important;
+            }
+            .mobile-toggle.open span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg) !important;
             }
             .nav-links-wrapper {
                 display: flex !important;
@@ -203,7 +221,9 @@
                 <a href="#contact" class="nav-cta">Let's Talk</a>
             </div>
             <div class="mobile-toggle">
-                <i class="fas fa-bars"></i>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
     </header>
