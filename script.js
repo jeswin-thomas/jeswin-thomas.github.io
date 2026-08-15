@@ -99,6 +99,14 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 // Simple Form Handling
 // Typed.js Integration
 document.addEventListener('DOMContentLoaded', () => {
+    // Dynamic Experience Calculator (Started in 2018)
+    const startYear = 2018;
+    const currentYear = new Date().getFullYear();
+    const expYears = currentYear - startYear;
+    document.querySelectorAll('.exp-years-val').forEach(el => {
+        el.textContent = expYears + '+';
+    });
+
     new Typed('#typing-text', {
         strings: ['AI Systems', 'Data Solutions', 'Scalable Systems', 'Agile Architectures'],
         typeSpeed: 60,
