@@ -20,7 +20,7 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <link rel="stylesheet" href="style.css?v=51">
+    <link rel="stylesheet" href="style.css?v=65">
     <style>
         /* Force mobile navigation rules to load directly to bypass browser caching */
         @media (max-width: 1024px) {
@@ -64,6 +64,118 @@
             }
             .nav-cta {
                 margin: 0 !important;
+            }
+            .section {
+                padding: 4rem 0 !important;
+            }
+            .hero {
+                padding-top: 100px !important;
+                height: 100vh !important;
+                height: 100dvh !important;
+                min-height: 100vh !important;
+                min-height: 100dvh !important;
+                display: flex !important;
+                align-items: flex-start !important;
+                position: relative !important;
+                overflow: hidden !important;
+            }
+            .scroll-indicator {
+                bottom: 15px !important;
+            }
+            .hero h1 {
+                font-size: clamp(2rem, 7vw, 3.5rem) !important;
+                line-height: 1.2 !important;
+                margin-bottom: 0.8rem !important;
+            }
+            .hero-description {
+                margin-bottom: 1.5rem !important;
+            }
+            .hero-content {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: flex-start !important;
+                height: calc(100vh - 180px) !important;
+                height: calc(100dvh - 180px) !important;
+                width: 100% !important;
+            }
+            .hero-stats {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: flex-start !important;
+                flex-wrap: nowrap !important;
+                gap: 0.5rem !important;
+                width: 100% !important;
+                margin-top: auto !important; /* Push stats row to the bottom of the hero-content */
+            }
+            .stat-item {
+                flex: 1 !important;
+                text-align: center !important;
+                min-width: 0 !important;
+            }
+            .stat-number {
+                font-size: clamp(1.1rem, 4.5vw, 2.2rem) !important;
+                margin-bottom: 0.25rem !important;
+            }
+            .stat-label {
+                font-size: clamp(0.65rem, 2.5vw, 0.9rem) !important;
+                line-height: 1.2 !important;
+                white-space: normal !important;
+            }
+            .stat-item:not(:last-child)::after {
+                display: none !important; /* Hide line dividers to save space */
+            }
+            .hero-actions {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                gap: 1rem !important;
+                width: 100% !important;
+            }
+            .hero-actions .btn {
+                flex: 1 !important;
+                min-width: 140px !important;
+                padding: 0.9rem 1.5rem !important;
+                font-size: 0.9rem !important;
+                text-align: center !important;
+            }
+        }
+
+        /* Short viewport height specific compression for tablets and phones */
+        @media (max-height: 720px) {
+            .hero {
+                padding-top: 75px !important;
+            }
+            .hero h1 {
+                font-size: 1.7rem !important;
+                margin-bottom: 0.4rem !important;
+            }
+            .hero-description {
+                font-size: 0.8rem !important;
+                margin-bottom: 0.8rem !important;
+            }
+            .hero-actions {
+                gap: 0.5rem !important;
+            }
+            .hero-actions .btn {
+                padding: 0.7rem 1.2rem !important;
+                font-size: 0.8rem !important;
+            }
+            .hero-content {
+                height: calc(100vh - 150px) !important;
+                height: calc(100dvh - 150px) !important;
+            }
+            .hero-stats {
+                margin-top: auto !important;
+                gap: 0.2rem !important;
+            }
+            .stat-number {
+                font-size: 1rem !important;
+            }
+            .stat-label {
+                font-size: 0.6rem !important;
+            }
+            .scroll-indicator {
+                bottom: 8px !important;
             }
         }
     </style>
