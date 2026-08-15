@@ -20,33 +20,21 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <link rel="stylesheet" href="style.css?v=48">
+    <link rel="stylesheet" href="style.css?v=51">
     <style>
         /* Force mobile navigation rules to load directly to bypass browser caching */
         @media (max-width: 1024px) {
             .mobile-toggle {
                 display: flex !important;
-                flex-direction: column !important;
                 justify-content: center !important;
                 align-items: center !important;
-                width: 44px !important;
-                height: 44px !important;
-                gap: 5px !important;
+                font-size: 1.8rem !important;
+                color: #0b0f19 !important;
                 cursor: pointer !important;
                 z-index: 1050 !important;
                 position: fixed !important;
                 right: 1.5rem !important;
-                top: 23px !important;
-                background: #ffffff !important;
-                border-radius: 50% !important;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
-            }
-            .mobile-toggle span {
-                display: block !important;
-                width: 20px !important;
-                height: 2px !important;
-                background: #0b0f19 !important;
-                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+                top: 30px !important;
             }
             .nav-links-wrapper {
                 display: flex !important;
@@ -103,9 +91,7 @@
                 <a href="#contact" class="nav-cta">Let's Talk</a>
             </div>
             <div class="mobile-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+                <i class="fas fa-bars"></i>
             </div>
         </nav>
     </header>

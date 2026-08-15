@@ -142,6 +142,15 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileToggle.addEventListener('click', () => {
             mobileToggle.classList.toggle('open');
             navLinksWrapper.classList.toggle('active');
+
+            const icon = mobileToggle.querySelector('i');
+            if (icon) {
+                if (mobileToggle.classList.contains('open')) {
+                    icon.className = 'fas fa-times';
+                } else {
+                    icon.className = 'fas fa-bars';
+                }
+            }
         });
 
         const navLinks = document.querySelectorAll('.nav-links a');
@@ -149,6 +158,11 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 mobileToggle.classList.remove('open');
                 navLinksWrapper.classList.remove('active');
+
+                const icon = mobileToggle.querySelector('i');
+                if (icon) {
+                    icon.className = 'fas fa-bars';
+                }
             });
         });
     }
