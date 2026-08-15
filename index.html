@@ -20,7 +20,7 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <link rel="stylesheet" href="style.css?v=69">
+    <link rel="stylesheet" href="style.css?v=73">
     <style>
         /* Force mobile navigation rules to load directly to bypass browser caching */
         @media (max-width: 1024px) {
@@ -145,16 +145,32 @@
             }
             .hero-actions {
                 display: flex !important;
-                flex-wrap: wrap !important;
-                gap: 1rem !important;
+                flex-direction: row !important;
+                justify-content: center !important;
+                align-items: center !important;
+                gap: 1.5rem !important;
                 width: 100% !important;
+                margin-top: 2rem !important;
             }
             .hero-actions .btn {
-                flex: 1 !important;
-                min-width: 140px !important;
-                padding: 0.9rem 1.5rem !important;
+                width: auto !important;
+                min-width: 160px !important;
+                padding: 0.9rem 1.8rem !important;
                 font-size: 0.9rem !important;
                 text-align: center !important;
+            }
+        }
+
+        /* Mobile specific stacking for phones */
+        @media (max-width: 480px) {
+            .hero-actions {
+                flex-direction: column !important;
+                margin-top: 2.8rem !important;
+                gap: 0.8rem !important;
+            }
+            .hero-actions .btn {
+                width: 85% !important;
+                max-width: 280px !important;
             }
         }
 
@@ -173,6 +189,7 @@
             }
             .hero-actions {
                 gap: 0.5rem !important;
+                margin-top: 2rem !important;
             }
             .hero-actions .btn {
                 padding: 0.7rem 1.2rem !important;
