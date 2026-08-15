@@ -107,6 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
         el.textContent = expYears + '+';
     });
 
+    // Dynamic Copyright Year
+    const copyrightYearEl = document.getElementById('copyright-year');
+    if (copyrightYearEl) {
+        copyrightYearEl.textContent = currentYear;
+    }
+
     new Typed('#typing-text', {
         strings: ['AI Systems', 'Data Solutions', 'Scalable Systems', 'Agile Architectures'],
         typeSpeed: 60,

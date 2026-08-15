@@ -133,8 +133,8 @@ nav {
     letter-spacing: -1px;
 }
 
-.logo-dot {
-    color: var(--accent);
+.logo-highlight {
+    color: var(--accent-light);
 }
 
 .nav-links-wrapper {
@@ -175,7 +175,7 @@ nav {
 }
 
 .nav-cta {
-    background: var(--primary);
+    background: var(--accent-light);
     color: var(--white);
     padding: 0.8rem 1.8rem;
     border-radius: 50px;
@@ -187,7 +187,8 @@ nav {
 
 .nav-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+    background: #7c3aed;
 }
 
 /* Hero Section */
@@ -361,15 +362,17 @@ nav {
 }
 
 .btn-outline {
-    border: 2px solid var(--accent);
-    color: var(--accent);
+    background: var(--accent-light);
+    color: var(--white);
+    box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.3);
+    border: none;
 }
 
 .btn-outline:hover {
-    background: var(--accent);
+    background: #7c3aed;
     color: var(--white);
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px -5px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 15px 30px -5px rgba(139, 92, 246, 0.45);
 }
 
 .hero-stats {
@@ -404,7 +407,7 @@ nav {
     font-family: 'Outfit', sans-serif;
     font-size: 2.5rem;
     font-weight: 800;
-    color: var(--primary);
+    color: var(--accent-light);
     line-height: 1;
     margin-bottom: 0.5rem;
 }
@@ -494,6 +497,7 @@ nav {
     font-family: 'Outfit', sans-serif;
     font-size: 3rem;
     font-weight: 800;
+    color: var(--accent);
 }
 
 /* About Section */
@@ -501,7 +505,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 5rem;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .image-wrapper {
@@ -591,10 +595,6 @@ nav {
     color: var(--text-main);
 }
 
-.dark-section .section-title {
-    color: var(--text-main);
-}
-
 .timeline {
     max-width: 900px;
     margin: 0 auto;
@@ -628,6 +628,7 @@ nav {
 .timeline-content h3 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    color: var(--accent-light);
 }
 
 .timeline-content p {
@@ -846,9 +847,7 @@ nav {
     font-weight: 800;
 }
 
-.footer-logo span {
-    color: var(--accent);
-}
+
 
 .footer p {
     color: var(--text-muted);
